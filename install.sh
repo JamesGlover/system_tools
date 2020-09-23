@@ -5,7 +5,7 @@ if [[ $OSTYPE == "darwin"* ]]; then
   if grep -q "`pwd`/profile_scripts/darwin.sh" ~/.profile; then
     echo 'Already installed'
   else
-    echo "`pwd`/profile_scripts/darwin.sh" >> ~/.profile
+    echo "source `pwd`/profile_scripts/darwin.sh `pwd`" >> ~/.profile
     echo 'Installed'
   fi
 else
