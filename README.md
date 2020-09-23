@@ -5,3 +5,7 @@ A collection of shell scripts and other tools for day-to-day usage
 I'm expecting a replacement laptop later today,
 so am attempting to gather together my various
 customizations to make migration easier.
+
+Feel free to grab anything which looks useful,
+but unless you are me, its probably best not
+to just use this outright.
