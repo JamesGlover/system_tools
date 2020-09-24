@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'pathname'
+require_relative 'lib/git_repo'
+
+if ARGV.first == 'all'
+  Pathname.getwd.each_child do |directory|
+    next unless directory.directory? && directory.glob('.git').any?
+    repo = GitRepo.new(directory)
+    repo.cleanup
+  end
+else
+  Pathname.getwd.tap do |directory|
+    next unless directory.directory? && directory.glob('.git').any?
+    repo = GitRepo.new(directory)
+    repo.cleanup
+  end
+end

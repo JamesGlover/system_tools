@@ -14,7 +14,7 @@ to just use this outright.
 
 ## Installation
 
-```
+```bash
 git@github.com:JamesGlover/system_tools.git
 cd system_tools
 ./install.sh

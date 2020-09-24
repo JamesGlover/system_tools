@@ -2,7 +2,7 @@
 # Typing whoops removes the last history entry
 alias whoops="history -d \`history 2 | head -n 1 | awk '{ print $1 }'\`; clear"
 # Cleans up anything merged to master
-alias git-clean='git branch --merged master | egrep  -v "^[* ]+(master|release|production|next_release)$" | xargs git branch -d'
+# alias git-clean='git branch --merged develop | egrep  -v "^[* ]+(master|release|production|next_release|develop)$" | xargs git branch -d'
 # Short bundler alias
 alias bx='bundle exec'
 
@@ -27,3 +27,6 @@ fi
 shopt -s histappend
 
 export HOMEBREW_NO_INSTALL_CLEANUP=1
+
+# Add our tools to the path
+export PATH="$PATH:$1/tools"

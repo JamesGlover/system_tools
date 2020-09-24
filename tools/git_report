@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'pathname'
+require_relative 'lib/git_repo'
+
+Pathname.getwd.each_child do |directory|
+  next unless directory.directory? && directory.glob('.git').any?
+  repo = GitRepo.new(directory)
+  puts repo.report
+end

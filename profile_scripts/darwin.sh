@@ -1,4 +1,4 @@
-source $1/profile_scripts/shared.sh
+source $1/profile_scripts/shared.sh $1
 
 # iTerm extensions
 function title {
