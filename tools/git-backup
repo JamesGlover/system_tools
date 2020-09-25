@@ -4,10 +4,7 @@ require 'pathname'
 require_relative 'lib/git_repo'
 
 all = ARGV.include?('all')
-force = ARGV.include?('force')
-sync = ARGV.include?('sync')
 
 GitRepo.with_repo(recursive: all) do |repo|
-  repo.sync if sync
-  repo.cleanup(force)
+  repo.backup
 end

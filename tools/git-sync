@@ -3,6 +3,6 @@
 require 'pathname'
 require_relative 'lib/git_repo'
 
-GitRepo.with_repo(recursive: true) do |repo|
-  puts repo.report
+GitRepo.with_repo do |repo|
+  repo.sync
 end
